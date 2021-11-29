@@ -1,0 +1,371 @@
+.Explore__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.Explore__container .Explore__header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.Explore__container .Explore__header h1 {
+  text-align: center;
+  background: linear-gradient(90deg, #0fede1 0%, #063db9 34%, #8d18d5 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+}
+.Explore__container .Explore__header .Explore__searchInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Explore__container .Explore__header .Explore__searchInput input {
+  padding: 7px 20px;
+  width: 350px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #f4f7fc;
+  border-right: none;
+  outline: none;
+}
+.Explore__container .Explore__header .Explore__searchInput button {
+  border-radius: 0 20px 20px 0;
+  padding: 7px 20px;
+  border: 1px solid #f4f7fc;
+  background-color: #18b3cc;
+  color: #fff;
+  cursor: pointer;
+}
+.Explore__container .Explore__header .Explore__filterIcons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+}
+.Explore__container .Explore__header .Explore__filterIcons .Explore__FilterIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px 5px 10px;
+  background: #f4f7fc;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #0003;
+  width: 120px;
+  cursor: pointer;
+  gap: 5px;
+  transition: 0.5s ease-in-out;
+}
+.Explore__container .Explore__header .Explore__filterIcons .Explore__FilterIcon:hover {
+  transform: translateY(-10px);
+  background-color: white;
+}
+.Explore__container .Explore__header .Explore__filterIcons .Explore__FilterIcon img {
+  height: 40px;
+}
+.Explore__container .Explore__header .Explore__breakLine {
+  height: 2px;
+  width: 75%;
+  margin: auto;
+  opacity: 0.3;
+  background-color: #212529;
+}
+.Explore__container .Explore__header .Explore__optionsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes {
+  display: flex;
+  gap: 10px;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch {
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+  overflow: hidden;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch span {
+  border-radius: 15px;
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch span::before {
+  background: #fff;
+  border-radius: 50%;
+  bottom: 1px;
+  box-shadow: 3px 0px 7px #444;
+  content: "";
+  display: block;
+  height: 22px;
+  left: 1px;
+  position: absolute;
+  right: 50px;
+  top: 1px;
+  width: 22px;
+  transition-property: all;
+  transition-duration: 0.6s;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch input:checked + span {
+  background: #236093;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsCheckBoxes .Explore__optionCheckBox .Explore__optionCheckBoxSwitch input:checked + span:before {
+  box-shadow: -3px 0px 7px #002551;
+  left: calc(100% - 23px);
+  /** width of .slider:before + 1px */
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsFilters {
+  display: flex;
+  gap: 10px;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsFilters .Explore__optionsFilter {
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid #f4f7fc;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsFilters .Explore__optionsFilter:enabled {
+  cursor: pointer;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsFilters .Explore__optionsFilter:focus {
+  background-image: linear-gradient(45deg, green 50%, transparent 50%), linear-gradient(135deg, transparent 50%, green 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+.Explore__container .Explore__header .Explore__optionsContainer .Explore__optionsFilters .Explore__optionsFilter:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.Explore__container .Explore__cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 150px;
+  gap: 350px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtons {
+  display: flex;
+  gap: 40px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtons .Explore__cardsButton {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtons .Explore__cardsButton p {
+  margin: 0;
+  font-weight: bold;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtons .Explore__cardsButton .Explore__cardsButtonUnderline {
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  left: -20%;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtons .Explore__cardsButton:hover > .Explore__cardsButtonUnderline {
+  width: 150%;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsButtonsActive {
+  background-color: black;
+  color: white;
+  padding: 5px 30px 0 30px;
+  border-radius: 25px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardsHeader .Explore__cardsTotalItems {
+  opacity: 0.5;
+  font-size: 20px;
+}
+.Explore__container .Explore__cardsContainer .infinite-scroll-component {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  line-height: 0;
+  box-shadow: 3px 5px 15px #04d3;
+  text-decoration: none;
+  border: 3px solid #4e14ff;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  line-height: 0;
+  box-shadow: 3px 5px 15px #04d3;
+  text-decoration: none;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardSingleId {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId i,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardSingleId i {
+  color: #4e14ff;
+  font-size: 25px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  gap: 3px;
+  border: 1px solid rgba(141, 24, 213, 0);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 2px;
+  padding-top: 20px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage i,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage i {
+  color: #4e14ff;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage:hover,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage:hover {
+  border-bottom: 1px solid #f4f7fc;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardBreakLine,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardBreakLine {
+  height: 2px;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.3;
+  margin: 20px 0;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg {
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  justify-content: center;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg img,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg img {
+  height: 250px;
+  max-width: 100%;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg:hover,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg:hover {
+  transform: scale(1.03);
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #18b3cc;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p span,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice p span {
+  font-size: 16px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank {
+  color: #212529;
+  font-weight: bold;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank span,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank span {
+  margin-top: 5px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank img,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank img {
+  width: 15px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoLeft,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoLeft {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightEye,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoRightEye {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #8b91da;
+}
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightHeart,
+.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoRightHeart {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #d63384;
+}/*# sourceMappingURL=Explore.css.map */

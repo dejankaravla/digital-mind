@@ -1,0 +1,199 @@
+@import "../Variables/Variables.scss";
+
+@mixin rightCards {
+  background: $whiteColor;
+  box-shadow: 0 5px 8px #0092;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+* {
+  margin: 0;
+}
+
+.Nft__cardBreakLine {
+  height: 2px;
+  width: 100%;
+  background-color: $darkColor;
+  margin: auto;
+  opacity: 0.3;
+}
+
+.Nft__container {
+  display: flex;
+  padding: 50px;
+  background-color: #f4f7fc;
+  justify-content: center;
+  gap: 60px;
+  .Nft__Left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .Nft__cardImg {
+      max-width: 700px;
+      img {
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+    .Nft__smallCardsInfo {
+      background-color: $whiteColor;
+      box-shadow: 0 5px 8px #0092;
+      border-radius: 10px;
+      .Nft__smallCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        padding: 30px;
+        gap: 5px;
+        .Nft__smallCard {
+          :first-child {
+            background-color: $purpleColor;
+            border-radius: 5px 5px 0 0;
+            padding: 10px;
+          }
+          :last-child {
+            background-color: $grayColor;
+            border-radius: 0 0 5px 5px;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .Nft__right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .Nft__cardInfo {
+      @include rightCards;
+
+      .Nft__cardIcons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        .Nft__cardIconsEye,
+        .Nft__cardIconsHeart {
+          background: $grayColor;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border-radius: 20px;
+          padding: 5px 20px;
+        }
+        .Nft__cardIconsHeart {
+          color: $pinkColor;
+        }
+      }
+
+      .Nft__creatorInfo {
+        display: flex;
+        gap: 20px;
+        p {
+          font-size: 12px;
+        }
+      }
+      .Nft__cardName {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        i {
+          font-size: 30px;
+          color: $blueColor;
+        }
+      }
+      .Nft__cardBreakLine {
+        width: 100%;
+      }
+
+      .Nft__cardInfoLeft {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 20px;
+        }
+      }
+      .Nft__cardTags {
+        display: flex;
+        gap: 10px;
+        p {
+          background: #faebd7;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+      }
+      .Nft__cardCollectionInfoImg {
+        display: flex;
+        gap: 10px;
+        .Nft__cardCollectionName {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            font-size: 20px;
+            color: $blueColor;
+          }
+        }
+      }
+      .Nft__cardWarning {
+        background: #fce100;
+        padding: 5px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+      .Nft__cardButtonsSocialAlert {
+        display: flex;
+        gap: 10px;
+
+        button {
+          font-size: 16px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          border: 1px solid $darkColor;
+          &:first-child {
+            border: 1px solid $blueColor;
+          }
+        }
+      }
+    }
+    .Nft__cardBuy {
+      @include rightCards;
+      h2 {
+        color: $tealColor;
+        span {
+          font-size: 18px;
+        }
+      }
+      button {
+        padding: 10px 0;
+        background-color: $blueColor;
+        color: $whiteColor;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .Nft__cardBuyInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        a {
+          color: $blueColor;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+    .Nft__history {
+      @include rightCards;
+    }
+  }
+}

@@ -1,0 +1,361 @@
+@import "../Variables/Variables.scss";
+
+@mixin cardSingleMixin {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  line-height: 0;
+  box-shadow: 3px 5px 15px #04d3;
+  text-decoration: none;
+}
+
+.Explore__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+  .Explore__header {
+    background-color: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h1 {
+      text-align: center;
+      background: linear-gradient(90deg, rgba(15, 237, 225, 1) 0%, rgba(6, 61, 185, 1) 34%, rgba(141, 24, 213, 1) 83%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 80px;
+    }
+    .Explore__searchInput {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input {
+        padding: 7px 20px;
+        width: 350px;
+        border-radius: 20px 0 0 20px;
+        border: 1px solid $grayColor;
+        border-right: none;
+        outline: none;
+      }
+      button {
+        border-radius: 0 20px 20px 0;
+        padding: 7px 20px;
+        border: 1px solid $grayColor;
+        background-color: $tealColor;
+        color: $whiteColor;
+        cursor: pointer;
+      }
+    }
+    .Explore__filterIcons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 14px;
+      .Explore__FilterIcon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 10px 5px 10px;
+        background: #f4f7fc;
+        border-radius: 10px;
+        box-shadow: 0 3px 5px #0003;
+        width: 120px;
+        cursor: pointer;
+        gap: 5px;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          transform: translateY(-10px);
+          background-color: white;
+        }
+        img {
+          height: 40px;
+        }
+      }
+    }
+    .Explore__breakLine {
+      height: 2px;
+      width: 75%;
+      margin: auto;
+      opacity: 0.3;
+      background-color: $darkColor;
+    }
+    .Explore__optionsContainer {
+      display: flex;
+      justify-content: space-evenly;
+      .Explore__optionsCheckBoxes {
+        display: flex;
+        gap: 10px;
+        .Explore__optionCheckBox {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .Explore__optionCheckBoxSwitch {
+            cursor: pointer;
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            overflow: hidden;
+            input {
+              height: 0;
+              opacity: 0;
+              width: 0;
+            }
+            span {
+              border-radius: 15px;
+              background: #ccc;
+              bottom: 0;
+              cursor: pointer;
+              display: block;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: 0.4s;
+              transition: 0.4s;
+
+              &::before {
+                background: #fff;
+                border-radius: 50%;
+                bottom: 1px;
+                box-shadow: 3px 0px 7px #444;
+                content: "";
+                display: block;
+                height: 22px;
+                left: 1px;
+                position: absolute;
+                right: 50px;
+                top: 1px;
+                width: 22px;
+                transition-property: all;
+                transition-duration: 0.6s;
+              }
+            }
+            input:checked + span {
+              background: #236093;
+            }
+            input:checked + span:before {
+              box-shadow: -3px 0px 7px #002551;
+              left: calc(100% - 23px); /** width of .slider:before + 1px */
+            }
+          }
+        }
+      }
+      .Explore__optionsFilters {
+        display: flex;
+        gap: 10px;
+
+        .Explore__optionsFilter {
+          &:enabled {
+            cursor: pointer;
+          }
+          width: 200px;
+          cursor: pointer;
+          border: 1px solid $grayColor;
+          border-radius: 4px;
+          display: inline-block;
+          font: inherit;
+          line-height: 1.5em;
+          padding: 0.5em 3.5em 0.5em 1em;
+          margin: 0;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+          background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px),
+            calc(100% - 2.5em) 0.5em;
+          background-size: 5px 5px, 5px 5px, 1px 1.5em;
+          background-repeat: no-repeat;
+          &:focus {
+            background-image: linear-gradient(45deg, green 50%, transparent 50%),
+              linear-gradient(135deg, transparent 50%, green 50%), linear-gradient(to right, #ccc, #ccc);
+            background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+            background-size: 5px 5px, 5px 5px, 1px 1.5em;
+            background-repeat: no-repeat;
+            border-color: green;
+            outline: 0;
+          }
+          &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+          }
+        }
+      }
+    }
+  }
+  .Explore__cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .Explore__cardsHeader {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 150px;
+      gap: 350px;
+      .Explore__cardsButtons {
+        display: flex;
+        gap: 40px;
+        .Explore__cardsButton {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+
+          p {
+            margin: 0;
+            font-weight: bold;
+          }
+          .Explore__cardsButtonUnderline {
+            height: 2px;
+            background-color: black;
+            width: 0;
+            transition: 0.2s ease-in-out;
+            position: relative;
+            left: -20%;
+          }
+          &:hover > .Explore__cardsButtonUnderline {
+            width: 150%;
+          }
+        }
+      }
+
+      .Explore__cardsButtonsActive {
+        background-color: black;
+        color: white;
+        padding: 5px 30px 0 30px;
+        border-radius: 25px;
+      }
+      .Explore__cardsTotalItems {
+        opacity: 0.5;
+        font-size: 20px;
+      }
+    }
+    .infinite-scroll-component {
+      display: grid;
+      grid-template-columns: 300px 300px 300px 300px;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .Explore__cardSingleVerified {
+      @include cardSingleMixin;
+      border: 3px solid $blueColor;
+    }
+    .Explore__cardSingle,
+    .Explore__cardSingleVerified {
+      @include cardSingleMixin;
+
+      .Explore__cardSingleId {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        i {
+          color: $blueColor;
+          font-size: 25px;
+        }
+      }
+      .Explore__cardCollectionPage {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        gap: 3px;
+        border: 1px solid rgba(141, 24, 213, 0);
+        width: fit-content;
+        padding-bottom: 2px;
+        padding-top: 20px;
+        i {
+          color: $blueColor;
+        }
+        &:hover {
+          border-bottom: 1px solid $grayColor;
+        }
+      }
+      .Explore__cardBreakLine {
+        height: 2px;
+        width: 100%;
+        background-color: $darkColor;
+        opacity: 0.3;
+        margin: 20px 0;
+      }
+      .Explore__cardImg {
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        justify-content: center;
+        img {
+          height: 250px;
+          max-width: 100%;
+        }
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+      .Explore__cardPrice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-size: 22px;
+          font-weight: bold;
+          color: $tealColor;
+          span {
+            font-size: 16px;
+          }
+        }
+        .Explore__cardRank {
+          color: $darkColor;
+          font-weight: bold;
+          gap: 5px;
+          display: flex;
+          align-items: center;
+          span {
+            margin-top: 5px;
+          }
+          img {
+            width: 15px;
+          }
+        }
+      }
+      .Explore__cardInfo {
+        display: flex;
+        padding-top: 10px;
+        justify-content: space-between;
+        font-size: 14px;
+        align-items: center;
+        .Explore__cardInfoLeft {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+        }
+        .Explore__cardInfoRightEye {
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          color: $indigoColor;
+        }
+        .Explore__cardInfoRightHeart {
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          color: $pinkColor;
+        }
+      }
+    }
+  }
+}

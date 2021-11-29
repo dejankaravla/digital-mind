@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import nftReducer from "../features/nft";
+import controlsReducer from "../features/controls";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    nft: nftReducer,
+    controls: controlsReducer,
   },
 });
