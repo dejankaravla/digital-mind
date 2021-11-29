@@ -227,18 +227,7 @@
   align-items: center;
   gap: 50px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified {
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 30px 20px;
-  line-height: 0;
-  box-shadow: 3px 5px 15px #04d3;
-  text-decoration: none;
-  border: 3px solid #4e14ff;
-}
-.Explore__container .Explore__cardsContainer .Explore__cardSingle,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -247,8 +236,7 @@
   box-shadow: 3px 5px 15px #04d3;
   text-decoration: none;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardSingleId {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -256,13 +244,11 @@
   font-weight: bold;
   margin-bottom: 5px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId i,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardSingleId i {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardSingleId i {
   color: #4e14ff;
   font-size: 25px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -275,94 +261,78 @@
   padding-bottom: 2px;
   padding-top: 20px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage i,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage i {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage i {
   color: #4e14ff;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage:hover,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardCollectionPage:hover {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardCollectionPage:hover {
   border-bottom: 1px solid #f4f7fc;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardBreakLine,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardBreakLine {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardBreakLine {
   height: 2px;
   width: 100%;
   background-color: #212529;
   opacity: 0.3;
   margin: 20px 0;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg {
   display: flex;
   align-items: center;
   transition: 0.5s ease-in-out;
   justify-content: center;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg img,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg img {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg img {
   height: 250px;
   max-width: 100%;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg:hover,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardImg:hover {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardImg:hover {
   transform: scale(1.03);
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice p {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p {
   font-size: 22px;
   font-weight: bold;
   color: #18b3cc;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p span,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice p span {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice p span {
   font-size: 16px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank {
   color: #212529;
   font-weight: bold;
   gap: 5px;
   display: flex;
   align-items: center;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank span,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank span {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank span {
   margin-top: 5px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank img,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardPrice .Explore__cardRank img {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardPrice .Explore__cardRank img {
   width: 15px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo {
   display: flex;
   padding-top: 10px;
   justify-content: space-between;
   font-size: 14px;
   align-items: center;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoLeft,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoLeft {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoLeft {
   display: flex;
   align-items: center;
   gap: 3px;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightEye,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoRightEye {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightEye {
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 3px;
   color: #8b91da;
 }
-.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightHeart,
-.Explore__container .Explore__cardsContainer .Explore__cardSingleVerified .Explore__cardInfo .Explore__cardInfoRightHeart {
+.Explore__container .Explore__cardsContainer .Explore__cardSingle .Explore__cardInfo .Explore__cardInfoRightHeart {
   font-size: 18px;
   display: flex;
   align-items: center;

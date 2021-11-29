@@ -5,7 +5,7 @@ const initialState = {
   titleInput: "",
   allTags: [],
   selectedOption: [],
-  singleNft: [],
+  singleNft: "",
 };
 
 const nft = createSlice({

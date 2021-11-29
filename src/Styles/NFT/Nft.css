@@ -150,7 +150,6 @@
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #212529;
-  cursor: pointer;
 }
 .Nft__container .Nft__right .Nft__cardInfo .Nft__cardButtonsSocialAlert button:first-child {
   border: 1px solid #4e14ff;
