@@ -271,7 +271,7 @@ function Explore() {
                     onClick={() => getSingleNft(card.Mint)}
                     to="/nft"
                     key={card._id}
-                    className={card.verified ? "Explore__cardSingleVerified" : "Explore__cardSingle"}
+                    className="Explore__cardSingle"
                   >
                     <div className="Explore__cardSingleId">
                       <span>{card.Title}</span>

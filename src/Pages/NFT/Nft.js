@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import "../../Styles/NFT/Nft.css";
 import cBadge from "../../Images/c_badge.svg";
 import solseaBadge from "../../Images/Solsea_Badge.svg";
-// import rank from "../../Images/rank.svg";
 
 function Nft() {
   const singleNft = useSelector((state) => state.nft.singleNft);
