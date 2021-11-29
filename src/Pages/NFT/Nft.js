@@ -20,14 +20,16 @@ function Nft() {
             </div>
             <dvi className="Nft__smallCardsInfo">
               <div className="Nft__smallCards">
-                {singleNft.Properties.attributes.map((attr) => {
-                  return (
-                    <div className="Nft__smallCard">
-                      <h4>{attr.trait_type}</h4>
-                      <h4>{attr.value}</h4>
-                    </div>
-                  );
-                })}
+                {singleNft.Properties.attributes
+                  ? singleNft.Properties.attributes.map((attr) => {
+                      return (
+                        <div className="Nft__smallCard">
+                          <h4>{attr.trait_type}</h4>
+                          <h4>{attr.value}</h4>
+                        </div>
+                      );
+                    })
+                  : null}
               </div>
               <div className="Nft__cardBreakLine"></div>
               <p>{singleNft ? singleNft.Description : ""}</p>
@@ -150,9 +152,7 @@ function Nft() {
             </div>
           </div>
         </div>
-      ) : (
-        <p>Wait</p>
-      )}
+      ) : null}
     </div>
   );
 }
